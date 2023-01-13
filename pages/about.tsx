@@ -1,15 +1,15 @@
 import React from 'react'
 import Head from 'next/head'
 
-const home = () => {
+const about = () => {
   return (
     <div className="text-3xl font-bold">
       <Head>
-        <title>Medium</title>
+        <title>About</title>
       </Head>
-      <h1>Home</h1>
+      <h1>About Page</h1>
     </div>
   )
 }
 
-export default home
+export default about
