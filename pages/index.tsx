@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import ArticleList from '../components/ArticleList'
 
 const home = () => {
   return (
@@ -7,7 +8,8 @@ const home = () => {
       <Head>
         <title>Medium</title>
       </Head>
-      <h1>Home</h1>
+      <h1 className='text-2xl'>Home</h1>
+      <ArticleList/>
     </div>
   )
 }
