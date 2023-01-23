@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ArticleList from '../components/ArticleList';
 import Trending from '../components/Trending';
 
 const home = () => {
@@ -19,6 +20,7 @@ const home = () => {
       </div>
       <div className='px-20 '>
         <Trending />
+        <ArticleList/>
       </div>
     </>
   );
