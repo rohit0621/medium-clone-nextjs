@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import React from 'react';
 
@@ -23,5 +24,6 @@ const Header = ({ children }) => {
     </>
   );
 };
+
 
 export default Header;
