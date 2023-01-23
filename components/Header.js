@@ -10,7 +10,7 @@ const Header = ({ children }) => {
           <Link href='/' className='text-3xl font-bold'>
             Medium
           </Link>
-          <div class='columns-5 px-20 text-center'>
+          <div className='columns-5 px-20 text-center'>
             <div>Our story</div>
             <div>Membership</div>
             <div>Write</div>
