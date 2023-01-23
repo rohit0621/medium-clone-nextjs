@@ -1,17 +1,29 @@
-import React from 'react'
+
 import Link from 'next/link';
+import React from 'react';
 
-const Header = () => {
+const Header = ({ children }) => {
   return (
-    <div className='bg-yellow-400'>
-        <h1 className='text-4xl font-bold'>Header</h1>
-        <ul>
-          <li  className='text-red-500 text-4xl'><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-        </ul>
-        
-    </div>
-  )
-}
+    <>
+      <div className='bg-yellow-500 content-between py-10'>
+        <div className='columns-2 px-20'>
+          <Link href='/' className='text-3xl font-bold'>
+            Medium
+          </Link>
+          <div class='columns-5 px-20 text-center'>
+            <div>Our story</div>
+            <div>Membership</div>
+            <div>Write</div>
+            <div>Sign In</div>
+            <button className='rounded-full bg-black text-white p-1 w-40'>
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Header
+
+export default Header;
