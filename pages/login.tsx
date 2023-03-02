@@ -29,7 +29,7 @@ export default function LoginPage(props) {
                     placeholder="name@company.com"
                   />
                 </div>
-                <div className="bg-red-500">
+                <div className="">
                   <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Password
                   </label>
@@ -73,7 +73,7 @@ export default function LoginPage(props) {
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
                   <a
-                    href="#"
+                    href="/sign-up"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Sign up

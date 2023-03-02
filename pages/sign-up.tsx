@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next";
 
 export default function SignUp(props) {
   return (
     <>
-      <div className="bg-white flex item-center justify-self-center">
+      <div className="bg-white ml-96">
         <section className="bg-white mt-32">
           <div className="flex flex-col px-6 py-8">
             <a
@@ -78,7 +79,7 @@ export default function SignUp(props) {
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Already Have an Account?{" "}
                   <a
-                    href="#"
+                    href="/login"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Sign In here
