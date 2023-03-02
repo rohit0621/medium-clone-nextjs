@@ -2,8 +2,9 @@
 import React from 'react';
 import ArticleList from '../components/ArticleList';
 import Trending from '../components/Trending';
+import { supabase } from './../lib/supabaseClient';
 
-const home = () => {
+ const home = ({articles}) => {
   return (
     <>
       <div className=' px-20 py-12 bg-yellow-500'>
@@ -19,11 +20,21 @@ const home = () => {
         <p className='text-lg font-semibold text-left'> Trending on Medium</p>
       </div>
       <div className='px-20 '>
-        <Trending />
-        <ArticleList/>
+        {/* <Trending /> */}
+        <ArticleList articles={articles}/>
       </div>
     </>
   );
 };
+
+export async function getServerSideProps() {
+  let { data } = await supabase.from('articles').select()
+  // console.log(data,"index")
+  return {
+    props: {
+     articles: data,
+    },
+  }
+}
 
 export default home;
