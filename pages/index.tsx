@@ -4,7 +4,9 @@ import ArticleList from '../components/ArticleList';
 import Trending from '../components/Trending';
 import { supabase } from './../lib/supabaseClient';
 
- const home = ({articles}) => {
+ const home = ({articles,persons}) => {
+  // console.log(persons,'persons')
+  // console.log(articles,'articles')
   return (
     <>
       <div className=' px-20 py-12 bg-yellow-500'>
@@ -29,10 +31,12 @@ import { supabase } from './../lib/supabaseClient';
 
 export async function getServerSideProps() {
   let { data } = await supabase.from('articles').select()
+  let  persons  =  (await supabase.from('persons').select()).data
   // console.log(data,"index")
   return {
     props: {
      articles: data,
+     persons: persons,
     },
   }
 }
