@@ -24,10 +24,6 @@ const list = [
   },
 ];
 
-import React from 'react';
-import ArticleList from '../components/ArticleList';
-import Trending from '../components/Trending';
-import { supabase } from './../lib/supabaseClient';
 
  const home = ({articles,persons}) => {
   // console.log(persons,'persons')
