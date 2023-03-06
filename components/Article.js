@@ -7,7 +7,7 @@ import medium1 from "../public/medium1.png";
 let articles=[]
 const Article = ({article}) => {
   let date=new Date(article.date)?.toLocaleDateString();
-  console.log(new Date(article.date)?.toLocaleDateString(),"article")
+  // console.log(new Date(article.date)?.toLocaleDateString(),"article")
   // return(<h1>{article.name}</h1>)
   return (
     <>

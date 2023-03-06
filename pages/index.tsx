@@ -53,11 +53,11 @@ const list = [
           </h2>
           <div className="grid grid-cols-3 gap-2 mt-5">
             {list.map((item, index) => {
-              console.log(item, "");
+              // console.log(item, "");
               return (
                 <button
                   className="bg-transparent text-gray-400 font-semibold hover:text-gray-500 py-1 px-4 border border-gray-300 hover:border-gray-300 "
-                  key="index"
+                  key={index}
                 >
                   {item.text}
                 </button>

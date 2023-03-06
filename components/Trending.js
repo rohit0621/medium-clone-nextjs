@@ -55,8 +55,8 @@ const Trending = (props) => {
     <div className="grid grid-rows-3 grid-flow-col gap-3 px-20 pt-5">
       {data.map((item, index) => {
         return (
-          <>
-            <div className="grid grid-rows-2 grid-flow-col" key={index}>
+          <div key={index}>
+            <div className="grid grid-rows-2 grid-flow-col" >
               <div className="text-black">{item.number}</div>
               <div className="text-black">{item.by}</div>
             </div>
@@ -65,7 +65,7 @@ const Trending = (props) => {
               <p className="text-sm text-gray-400">{item.date}</p>
               <p className="text-sm text-gray-400">{item.time} read</p>
             </div>
-          </>
+          </div>
         );
       })}
     </div>
