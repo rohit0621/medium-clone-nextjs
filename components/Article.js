@@ -1,6 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import medium1 from '../public/medium1.png'
+import React from "react";
+import Image from "next/image";
+import medium1 from "../public/medium1.png";
+
 
 
 let articles=[]
@@ -42,4 +43,5 @@ export default Article
 
 
   
+
 
