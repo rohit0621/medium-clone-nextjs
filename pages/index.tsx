@@ -24,7 +24,10 @@ const list = [
   },
 ];
 
-const home = ({ articles }) => {
+
+ const home = ({articles,persons}) => {
+  // console.log(persons,'persons')
+  // console.log(articles,'articles')
   return (
     <>
       <div className=" px-20 py-12 bg-yellow-500">
@@ -50,11 +53,11 @@ const home = ({ articles }) => {
           </h2>
           <div className="grid grid-cols-3 gap-2 mt-5">
             {list.map((item, index) => {
-              console.log(item, "");
+              // console.log(item, "");
               return (
                 <button
                   className="bg-transparent text-gray-400 font-semibold hover:text-gray-500 py-1 px-4 border border-gray-300 hover:border-gray-300 "
-                  key="index"
+                  key={index}
                 >
                   {item.text}
                 </button>
@@ -69,11 +72,13 @@ const home = ({ articles }) => {
 };
 
 export async function getServerSideProps() {
-  let { data } = await supabase.from("articles").select();
+  let { data } = await supabase.from('articles').select()
+  let  persons  =  (await supabase.from('persons').select()).data
   // console.log(data,"index")
   return {
     props: {
-      articles: data,
+     articles: data,
+     persons: persons,
     },
   };
 }
