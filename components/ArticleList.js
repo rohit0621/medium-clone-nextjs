@@ -1,14 +1,12 @@
 import React from 'react'
 import Article from './Article'
 
-const ArticleList = () => {
+const ArticleList = ({articles}) => {
   return (
     <div className='flex flex-col gap-4'>
-        <Article/>
-        <Article/>
-        <Article/>
-        <Article/>
-        <Article/>
+      {articles.map((article)=>(
+        <Article key={article.id} article={article} />))}
+        {/* <articles key={article.id} article={article} />))} */}
     </div>
   )
 }
