@@ -52,7 +52,7 @@ const data = [
 
 const Trending = (props) => {
   return (
-    <div className="grid grid-rows-3 grid-flow-col gap-3 px-20 pt-5">
+    <div className="grid grid-rows-2 grid-flow-col gap-3 px-20 pt-5">
       {data.map((item, index) => {
         return (
           <div key={index}>

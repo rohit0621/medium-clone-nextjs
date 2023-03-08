@@ -3,6 +3,8 @@ import ArticleList from "../components/ArticleList";
 import Trending from "../components/Trending";
 import { supabase } from "./../lib/supabaseClient";
 import Footer from "../components/Footer";
+import Link from 'next/link'
+
 const list = [
   {
     text: "Programing",
@@ -36,14 +38,16 @@ const list = [
           Discover stories, thinking, and expertise from writers on any topic.
         </p>
         <button className="rounded-full bg-black text-white p-1 w-40 mt-10">
-          Start Reading
+         <Link href='/login' className='text-md'>
+           Start Reading
+         </Link>
         </button>
       </div>
       <div className="px-20 pt-10 columns-2  ">
         <p className="text-lg font-semibold text-left"> Trending on Medium</p>
       </div>
       <Trending />
-      <div className="grid grid-cols-2 gap-8 px-10 py-5 ">
+      <div className="grid grid-cols-2 gap-16 px-20 py-20 ">
         <div>
           <ArticleList articles={articles} />
         </div>

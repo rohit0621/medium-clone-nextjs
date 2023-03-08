@@ -11,7 +11,7 @@ const Article = ({article}) => {
   // return(<h1>{article.name}</h1>)
   return (
     <>
-      <div key={article.id} className="p-6 w-1/2 bg-gray-200 rounded-xl shadow-lg flex justify-between space-x-4">
+      <div key={article.id} className="p-6 bg-gray-200 rounded-xl shadow-lg flex justify-between space-x-4">
        <div>
           <div className='flex gap-1'>
          <div> <img alt="img" width="30" height="30" className='rounded-full' src={article.avatarurl}></img></div>

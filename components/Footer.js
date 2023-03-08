@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 
 const list = [
   {
@@ -34,7 +35,9 @@ export default function Footer() {
         {list.map((item, index) => {
           return (
             <div key={index} className="text-gray-500 text-sm">
-              {item.text}
+              <Link href={`${item.text.toLowerCase()}`} className='text-md'>
+               {item.text}
+              </Link>
             </div>
           );
         })}
