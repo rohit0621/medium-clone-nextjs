@@ -3,7 +3,7 @@ import React from "react";
 const data = [
   {
     number: "01",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -11,7 +11,7 @@ const data = [
 
   {
     number: "02",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -19,7 +19,7 @@ const data = [
 
   {
     number: "03",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -27,7 +27,7 @@ const data = [
 
   {
     number: "04",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -35,7 +35,7 @@ const data = [
 
   {
     number: "05",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -43,7 +43,7 @@ const data = [
 
   {
     number: "06",
-    by: "Tom Cooper",
+    name: "Tom Cooper",
     topic: "Ukraine War, 17 January 2023: Klishchivka",
     date: "Jan 17",
     time: "5 min",
@@ -52,23 +52,35 @@ const data = [
 
 const Trending = (props) => {
   return (
-    <div className="grid grid-rows-3 grid-flow-col gap-3 px-20 pt-5">
+    <>
+     <div className="px-28 pt-10 columns-2  ">
+        <p className="text-lg font-semibold text-left"> Trending on Medium</p>
+      </div>
+    <div className="grid grid-rows-2 grid-flow-col gap-3 px-28 pt-5">
       {data.map((item, index) => {
         return (
-          <div key={index}>
-            <div className="grid grid-rows-2 grid-flow-col" >
-              <div className="text-black">{item.number}</div>
-              <div className="text-black">{item.by}</div>
+            <div key={index} className="flex direction-row gap-4 mb-8" >
+              <div className="text-gray-300 text-3xl">{item.number}</div>
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-row gap-2">
+                  <div className="flex items-center" >
+                  <img alt="img" className='rounded-full h-5 w-5' src='https://miro.medium.com/fit/c/400/268/1*Q61lOFBFU65hoNjUCL81wA.jpeg'></img>
+                  </div>
+                  <div className="text-black">{item.name}</div>
+                </div>
+                <div className="text-black font-bold">{item.topic}</div>
+                <div className="flex direction-row gap-2 items-center">
+                  <p className="text-sm text-gray-500">{item.date}</p>
+                  <div className="w-1 h-1 bg-gray-500 rounded-full"></div>
+                  <p className="text-sm text-gray-500">{item.time} read</p>
+                </div>
+              </div>
             </div>
-            <div className="text-black">{item.topic}</div>
-            <div className="columns-2">
-              <p className="text-sm text-gray-400">{item.date}</p>
-              <p className="text-sm text-gray-400">{item.time} read</p>
-            </div>
-          </div>
         );
       })}
     </div>
+    <div className="w-full h-px bg-gray-200 mt-4"></div>
+    </>
   );
 };
 
