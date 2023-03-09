@@ -2,7 +2,9 @@
 module.exports = {
   content: ["./pages/*.tsx", "./components/*.js"],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth:{'360':'360px'}
+    },
   },
   plugins: [],
 };
