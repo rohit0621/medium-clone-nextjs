@@ -1,5 +1,5 @@
-import React from 'react'
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
 const help = () => {
   return (
@@ -9,7 +9,7 @@ const help = () => {
       </Head>
       <h1>Help Page</h1>
     </div>
-  )
-}
+  );
+};
 
-export default help
+export default help;
