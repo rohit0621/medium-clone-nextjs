@@ -1,27 +1,11 @@
 import React from "react";
+import DateFunction from "./DateFunction";
 
 const Article = ({ article }) => {
-  let date = new Date(article.date);
-  const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const formattedDate =
-    monthNames[date.getMonth()] + " " + String(date.getDate()).padStart(2, "0");
-
+  const formattedDate = DateFunction(article.date);
   return (
     <>
-      <div key={article.id} className="p-6 flex justify-between space-x-4">
+      <div key={article.id} className="p-4 flex justify-between space-x-4">
         <div>
           <div className="flex gap-2">
             <img
