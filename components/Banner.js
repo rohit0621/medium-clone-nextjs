@@ -1,19 +1,21 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import LoginModal from "./LoginModal";
+import SignUpModal from "./SignUpModal";
 
 const Banner = () => {
-  const [showModal, setShowModal] = React.useState(false);
-  const modalActive = () => {
-    setShowModal(true);
+  const [showSignUpModal, setShowSignUpModal] = React.useState(false);
+  const signUpModalActive = () => {
+    setShowSignUpModal(true);
   };
-  const modalNotActive = () => {
-    setShowModal(false);
+  const signUpModalNotActive = () => {
+    setShowSignUpModal(false);
   };
-
   return (
     <>
-      <LoginModal showModal={showModal} modalNotActive={modalNotActive} />
+      <SignUpModal
+        showSignUpModal={showSignUpModal}
+        modalNotActive={signUpModalNotActive}
+      />
       <div
         id="banner"
         className=" px-28 py-12 bg-yellow-500 grid grid-columns-2 grid-flow-col"
@@ -27,7 +29,7 @@ const Banner = () => {
             </p>
           </div>
           <button className="rounded-full bg-black text-white px-2 py-1 w-48 h-12 mt-10">
-            <Link href="/" className="text-xl" onClick={modalActive}>
+            <Link href="/" className="text-xl" onClick={signUpModalActive}>
               Start Reading
             </Link>
           </button>
