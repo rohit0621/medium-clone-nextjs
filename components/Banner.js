@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import SignUpModal from "./SignUpModal";
+import { Playfair_Display } from "@next/font/google";
+
+const playfair_Display = Playfair_Display({
+  weight: "800",
+  subsets: ["latin"],
+});
 
 const Banner = () => {
   const [showSignUpModal, setShowSignUpModal] = React.useState(false);
@@ -18,17 +24,19 @@ const Banner = () => {
       />
       <div
         id="banner"
-        className=" px-28 py-12 bg-yellow-500 grid grid-columns-2 grid-flow-col"
+        className=" px-28 py-28 bg-yellow-500 grid grid-columns-2 grid-flow-col"
       >
         <div>
-          <h1 className="text-8xl font-bold">Stay curious.</h1>
+          <h1 className={`${playfair_Display} text-8xl font-medium`}>
+            Stay curious.
+          </h1>
           <div className="max-w-360">
             <p className="text-xl pt-4 ">
               Discover stories, thinking, and expertise from writers on any
               topic.
             </p>
           </div>
-          <button className="rounded-full bg-black text-white px-2 py-1 w-48 h-12 mt-10">
+          <button className="rounded-full bg-black text-white w-56 h-10 mt-12">
             <Link href="/" className="text-xl" onClick={signUpModalActive}>
               Start Reading
             </Link>

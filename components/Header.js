@@ -1,7 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import LoginModal from "./LoginModal";
 import SignUpModal from "./SignUpModal";
+import mediumLogo from "../public/mediumLogo.png";
+import { Playfair_Display } from "@next/font/google";
+
+const playfair_Display = Playfair_Display({
+  weight: "800",
+  subsets: ["latin"],
+});
 
 const Header = ({ children, handleCallback }) => {
   const [headerClass, setHeaderClass] = useState("bg-yellow-500");
@@ -45,9 +53,10 @@ const Header = ({ children, handleCallback }) => {
         className={`${headerClass} transition-colors duration-500 ease-in-out header content-between pt-4 sticky top-0 left-0 right-0`}
       >
         <div className="justify-between flex flex-row px-28">
-          <div>
-            <Link href="/" className="text-3xl font-bold">
-              Medium
+          <div className={`${playfair_Display.className}`}>
+            <Link href="/" className="text-3xl font-bold flex gap-1">
+              <Image src={mediumLogo} className="h-10 w-10 " />
+              <p>Medium</p>
             </Link>
           </div>
           <div className="flex justify-between items-center flex-row gap-6">
