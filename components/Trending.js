@@ -1,54 +1,5 @@
 import React from "react";
 import DateFunction from "./DateFunction";
-// const data = [
-//   {
-//     number: "01",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "02",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "03",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "04",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "05",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "06",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-// ];
 
 const Trending = ({ articles }) => {
   let trendingArr = articles.sort(
@@ -74,7 +25,7 @@ const Trending = ({ articles }) => {
                         alt="img"
                         className="rounded-full h-5 w-5"
                         src={item.imgurl}
-                      ></img>
+                      />
                     </div>
                     <div className="text-black">{item.name}</div>
                   </div>
