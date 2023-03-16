@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
-import { AiFillApple } from "react-icons/ai";
-import { BsTwitter } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { RxCross1 } from "react-icons/rx";
 
@@ -17,28 +15,19 @@ const signInMethods = [
     logo: <AiFillFacebook size={20} color="#3b5998" />,
   },
   {
-    method: "Apple",
-    logo: <AiFillApple size={20} />,
-  },
-  {
-    method: "Twitter",
-    logo: <BsTwitter size={20} color="#00acee" />,
-  },
-  {
     method: "email",
     logo: <TfiEmail size={20} />,
   },
 ];
 
-export default function loginModal(props) {
-  // const [showModal, setShowModal] = React.useState(false);
+export default function signUpModal(props) {
   return (
     <>
-      {props.showLoginModal ? (
+      {props.showSignUpModal ? (
         <>
           <div
-            onClick={() => props.modalNotActive(false)}
             className="bg-modal-rgba justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            onClick={() => props.modalNotActive(false)}
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*container*/}
@@ -47,13 +36,6 @@ export default function loginModal(props) {
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* content */}
-                {/* <button
-                  type="button"
-                  onClick={() => props.modalNotActive(false)}
-                  className="self-end m-4"
-                >
-                  <RxCross1 className="w-4 h-4 text-gray-500 hover:text-gray-800" />
-                </button> */}
                 <Link
                   href="/"
                   onClick={() => props.modalNotActive(false)}
@@ -61,11 +43,18 @@ export default function loginModal(props) {
                 >
                   <RxCross1 className="w-4 h-4 text-gray-500 hover:text-gray-800" />
                 </Link>
+                {/* <button
+                  type="button"
+                  onClick={() => props.modalNotActive(false)}
+                  className="self-end m-4"
+                >
+                  <RxCross1 className="w-4 h-4 text-gray-500 hover:text-gray-800" />
+                </button> */}
                 <div className="px-12 flex flex-col items-center">
-                  <div>
-                    <p className="text-3xl mt-4">Welcome back.</p>
+                  <div className="mt-12">
+                    <p className="text-3xl mt-4">Join Medium.</p>
                   </div>
-                  <div className="mt-16 flex flex-col gap-2">
+                  <div className="mt-20 flex flex-col gap-2">
                     {signInMethods.map((item, id) => (
                       <div
                         key={id}
@@ -77,25 +66,18 @@ export default function loginModal(props) {
                     ))}
                   </div>
                   <div className="mt-12 flex gap-1">
-                    <p>No account?</p>
-                    <Link href="/sign-up" className="text-green-700 font-bold">
-                      Create one
-                    </Link>
-                  </div>
-                  <div className="pt-16 flex gap-1">
-                    <p className="text-gray-500 text-sm">
-                      Forgot email or trouble signing in?
-                    </p>
+                    <p>Already have an account?</p>
                     <Link
-                      href="/help"
-                      className="text-gray-500 text-sm underline"
+                      href="/login"
+                      className="text-green-700 font-bold"
+                      //   onClick={showLoginModal}
                     >
-                      Get help
+                      Sign in
                     </Link>
                   </div>
-                  <div className="mt-8 mb-12 flex max-w-xl">
+                  <div className="mt-24 mb-28 flex max-w-xl">
                     <p className=" text-xs text-gray-500 text-center">
-                      Click “Sign In” to agree to Medium’s
+                      Click “Sign Up" to agree to Medium’s
                       <Link href="/terms" className="px-1 underline">
                         Terms of Service
                       </Link>

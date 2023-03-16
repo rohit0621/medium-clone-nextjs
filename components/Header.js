@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import LoginModal from "./LoginModal";
+import SignUpModal from "./SignUpModal";
 
 const Header = ({ children, handleCallback }) => {
   const [headerClass, setHeaderClass] = useState("bg-yellow-500");
-  const [showModal, setShowModal] = React.useState(false);
+  const [showLoginModal, setShowLoginModal] = React.useState(false);
+  const [showSignUpModal, setShowSignUpModal] = React.useState(false);
   const listenScrollEvent = (e) => {
     if (window.scrollY > 326) {
       setHeaderClass("bg-white");
@@ -16,16 +18,29 @@ const Header = ({ children, handleCallback }) => {
     window.addEventListener("scroll", listenScrollEvent);
   });
 
-  const modalActive = () => {
-    setShowModal(true);
+  const loginModalActive = () => {
+    setShowLoginModal(true);
   };
-  const modalNotActive = () => {
-    setShowModal(false);
+  const loginModalNotActive = () => {
+    setShowLoginModal(false);
+  };
+  const signUpModalActive = () => {
+    setShowSignUpModal(true);
+  };
+  const signUpModalNotActive = () => {
+    setShowSignUpModal(false);
   };
 
   return (
     <>
-      <LoginModal showModal={showModal} modalNotActive={modalNotActive} />
+      <LoginModal
+        showLoginModal={showLoginModal}
+        modalNotActive={loginModalNotActive}
+      />
+      <SignUpModal
+        showSignUpModal={showSignUpModal}
+        modalNotActive={signUpModalNotActive}
+      />
       <div
         className={`${headerClass} transition-colors duration-500 ease-in-out header content-between pt-4 sticky top-0 left-0 right-0`}
       >
@@ -52,12 +67,12 @@ const Header = ({ children, handleCallback }) => {
               </Link>
             </div>
             <div>
-              <Link href="/" className="text-sm" onClick={modalActive}>
+              <Link href="/" className="text-sm" onClick={loginModalActive}>
                 Sign In
               </Link>
             </div>
             <button className="rounded-full bg-black text-white px-3 py-2 w-32">
-              <Link href="/" className="text-sm" onClick={modalActive}>
+              <Link href="/" className="text-sm" onClick={signUpModalActive}>
                 Get Started
               </Link>
             </button>

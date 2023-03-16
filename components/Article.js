@@ -2,6 +2,7 @@ import React from "react";
 import DateFunction from "./DateFunction";
 
 const Article = ({ article }) => {
+  // console.log(article.id);
   const formattedDate = DateFunction(article.date);
   return (
     <>
