@@ -1,7 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import WriteFooter from "../components/WriteFooter";
-import Question from "../components/Questions";
+import Accordian from "../components/Accordian";
+import WriteHeader from "../components/WriteHeader";
 
 const list = [
   {
@@ -41,6 +42,7 @@ const write = () => {
       <Head>
         <title>Create a blog and start writing</title>
       </Head>
+      <WriteHeader />
       <div className=" bg-write-page w-full flex px-6">
         <div className="container px-10 py-16">
           <p className="text-sm text-white">START A BLOG FOR FREE</p>
@@ -75,7 +77,16 @@ const write = () => {
           })}
         </div>
       </div>
-      <Question />
+      <div className="bg-black align-center">
+        <div className="text-4xl font-bold text-white px-24">
+          More about writing on Medium:
+        </div>
+        <Accordian />
+        <div className="text-white font-bold text-md align-center justify-center ">
+          Looking for help getting started?
+        </div>
+      </div>
+
       <WriteFooter />
     </div>
   );
