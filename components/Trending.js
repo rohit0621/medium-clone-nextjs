@@ -1,54 +1,6 @@
 import React from "react";
 import DateFunction from "./DateFunction";
-// const data = [
-//   {
-//     number: "01",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "02",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "03",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "04",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "05",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-
-//   {
-//     number: "06",
-//     name: "Tom Cooper",
-//     topic: "Ukraine War, 17 January 2023: Klishchivka",
-//     date: "Jan 17",
-//     time: "5 min",
-//   },
-// ];
+import { FiTrendingUp } from "react-icons/fi";
 
 const Trending = ({ articles }) => {
   let trendingArr = articles.sort(
@@ -56,7 +8,10 @@ const Trending = ({ articles }) => {
   );
   return (
     <>
-      <div className="px-28 pt-10 columns-2  ">
+      <div className="px-28 pt-10 flex gap-4 items-center">
+        <div className="border border-black rounded-full">
+          <FiTrendingUp className="m-0.5 h-4 w-4" />
+        </div>
         <p className="text-lg font-semibold text-left"> Trending on Medium</p>
       </div>
       <div className="grid grid-cols-3 grid-flow-row gap-3 px-28 pt-5">
