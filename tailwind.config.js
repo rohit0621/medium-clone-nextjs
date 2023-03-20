@@ -7,6 +7,11 @@ module.exports = {
       height: { 44: "44px" },
       colors: {
         "modal-rgba": "rgba(255, 255, 255, 0.9)",
+        "write-page": "#F24D2E",
+        "bg-question": "#4b5563",
+        "accordian-bg": "#000000",
+        "accordian-link-bg": "rgba(255,255,255,.8);",
+        "accordian-answer-color": "#000",
       },
     },
   },
