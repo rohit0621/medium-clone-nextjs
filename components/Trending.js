@@ -29,7 +29,7 @@ const Trending = ({ articles }) => {
                         alt="img"
                         className="rounded-full h-5 w-5"
                         src={item.imgurl}
-                      ></img>
+                      />
                     </div>
                     <div className="text-black">{item.name}</div>
                   </div>
