@@ -55,7 +55,11 @@ const Header = ({ children, handleCallback }) => {
         <div className="justify-between flex flex-row px-28">
           <div className={`${playfair_Display.className}`}>
             <Link href="/" className="text-3xl font-bold flex gap-1">
-              <Image src={mediumLogo} className="h-10 w-10 " />
+              <Image
+                src={mediumLogo}
+                className="h-10 w-10 "
+                alt="medium-logo"
+              />
               <p>Medium</p>
             </Link>
           </div>
