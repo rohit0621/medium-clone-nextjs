@@ -8,6 +8,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { CiCirclePlus } from "react-icons/ci";
 import Carousel from "react-material-ui-carousel";
 import { Playfair_Display } from "@next/font/google";
+import { supabase } from "../lib/supabaseClient";
 
 const playfair_Display = Playfair_Display({
   weight: "400",
@@ -131,7 +132,13 @@ const publish = () => {
   );
 };
 
-export default publish;
+// async function handleClick() {
+//   await supabase.from("countries").insert({ id: 5, name: "Denmark" });
+//   console.log("first");
+// }
+// handleClick();
+
+// export default publish;
 
 //FOR styling Placeholder//
 
