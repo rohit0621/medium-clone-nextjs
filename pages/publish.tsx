@@ -28,7 +28,7 @@ const items = [
     title: "carousel 3",
   },
 ];
-const write = () => {
+const publish = () => {
   const [titleInputValue, setTitleInputValue] = useState(false);
   const [descInputValue, setDescInputValue] = useState(false);
   function titleInput(e) {
@@ -44,7 +44,7 @@ const write = () => {
   return (
     <div className="h-full text-3xl font-bold">
       <Head>
-        <title>Write</title>
+        <title>Publish</title>
       </Head>
       {/* HEADER */}
       <div id="header" className="flex flex-row justify-between mx-48 py-4">
@@ -131,7 +131,7 @@ const write = () => {
   );
 };
 
-export default write;
+export default publish;
 
 //FOR styling Placeholder//
 
